@@ -11,7 +11,6 @@ public class Main {
 	static ArrayList<Integer> listm30 = new ArrayList<Integer>(Arrays.asList(meses31));
 	static Integer[] meses30 = { 4, 6, 9, 11 };
 	static ArrayList<Integer> listm31 = new ArrayList<Integer>(Arrays.asList(meses30));
-	//static Integer[] mes02 = { 28, 29 };
 
 	public static void main(String[] args) {
 		System.out.println("Entrar una fecha xx/xx/xxxx");
