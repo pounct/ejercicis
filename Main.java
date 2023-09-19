@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Main {
 
 	static Scanner sc = new Scanner(System.in);
-	static Integer[] meses30 = { 1, 3, 5, 7, 8, 10, 12 };
-	static ArrayList<Integer> listm30 = new ArrayList<Integer>(Arrays.asList(meses30));
-	static Integer[] meses31 = { 4, 6, 9, 11 };
-	static ArrayList<Integer> listm31 = new ArrayList<Integer>(Arrays.asList(meses31));
-	static int[] mes02 = { 28, 29 };
+	static Integer[] meses31 = { 1, 3, 5, 7, 8, 10, 12 };
+	static ArrayList<Integer> listm30 = new ArrayList<Integer>(Arrays.asList(meses31));
+	static Integer[] meses30 = { 4, 6, 9, 11 };
+	static ArrayList<Integer> listm31 = new ArrayList<Integer>(Arrays.asList(meses30));
+	static Integer[] mes02 = { 28, 29 };
 
 	public static void main(String[] args) {
 		System.out.println("Entrar una fecha xx/xx/xxxx");
@@ -21,7 +21,11 @@ public class Main {
 		int mes = Integer.parseInt(los3[1]);
 		int ani = Integer.parseInt(los3[2]);
 
-		if (mes != 2) {
+		System.out.println(mes + "");
+		boolean mesControl = (mes >= 1 && mes <= 12);
+
+		if (mesControl && (mes != 2)) {
+			System.out.println(mes + "");
 			if (listm30.contains(mes)) {
 				if (dia <= 30 && dia >= 1) {
 					System.out.println("correcta");
@@ -38,8 +42,14 @@ public class Main {
 
 			}
 
-		} else {
+		} else if (mesControl && (mes == 2)) {
 			if (((ani % 4 == 0) && (ani % 100 != 0)) || (ani % 400 == 0)) {
+				if (dia <= 29 && dia >= 1) {
+					System.out.println("correcta");
+				} else {
+					System.out.println("error");
+				}
+			} else {
 				if (dia <= 28 && dia >= 1) {
 					System.out.println("correcta");
 				} else {
