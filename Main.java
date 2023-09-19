@@ -21,11 +21,11 @@ public class Main {
 		int mes = Integer.parseInt(los3[1]);
 		int ani = Integer.parseInt(los3[2]);
 
-		System.out.println(mes + "");
+		
 		boolean mesControl = (mes >= 1 && mes <= 12);
 
 		if (mesControl && (mes != 2)) {
-			System.out.println(mes + "");
+			
 			if (listm30.contains(mes)) {
 				if (dia <= 30 && dia >= 1) {
 					System.out.println("correcta");
@@ -42,7 +42,7 @@ public class Main {
 
 			}
 
-		} else if (mesControl && (mes == 2)) {
+		} else if ((mes == 2) {
 			if (((ani % 4 == 0) && (ani % 100 != 0)) || (ani % 400 == 0)) {
 				if (dia <= 29 && dia >= 1) {
 					System.out.println("correcta");
